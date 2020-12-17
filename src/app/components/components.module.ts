@@ -25,6 +25,13 @@ import { PartnersComponent } from './partners/partners.component';
 import { MembershipComponent } from './membership/membership.component';
 import { LeadersMentorshipProgramComponent } from './leaders-mentorship-program/leaders-mentorship-program.component';
 import { HomeComponent } from './home/home.component';
+import { CoursesComponent } from './courses/courses.component';
+import { ServicesComponent } from './services/services.component';
+import { ProfessionalBodiesComponent } from './professional-bodies/professional-bodies.component';
+import { NewsComponent } from './news/news.component';
+import { ContactComponent } from './contact/contact.component';
+import { AccreditedCollegesComponent } from './accredited-colleges/accredited-colleges.component';
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
     imports: [
@@ -54,7 +61,14 @@ import { HomeComponent } from './home/home.component';
         PartnersComponent,
         MembershipComponent,
         LeadersMentorshipProgramComponent,
-        HomeComponent
+        HomeComponent,
+        CoursesComponent,
+        ServicesComponent,
+        ProfessionalBodiesComponent,
+        NewsComponent,
+        ContactComponent,
+        AccreditedCollegesComponent,
+        EventsComponent,
     ],
     entryComponents: [NgbdModalContent],
     exports:[ ComponentsComponent ]
