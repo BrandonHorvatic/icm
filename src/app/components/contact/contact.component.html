@@ -1,20 +1,91 @@
 <div class="container">
     <h1>Contact Us</h1>
     <p>Any queries maybe directed to ICM National office:</p>
-    <p>admin@icmorg.co.za</p>
+    <p><a href="mailto:admin@icmorg.co.za">admin@icmorg.co.za</a></p>
     <p>011 450 3914 extension 3</p>
     <p>P.O. Box 10345</p>
     <p>Edenglen</p>
     <p>1613</p>
+    <h2>Follow Us!</h2>
+    <div class=" effect aeneas">
+        <div class="buttons">
+            <a href="https://www.facebook.com/pages/category/College---University/Institute-of-Credit-Management-of-South-Africa-149340262946/"
+                class="fb" title="Join us on Facebook" target="_blank" rel="noopener noreferrer"><i
+                    class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" class="tw" title="Join us on Twitter" target="_blank" rel="noopener noreferrer"><i
+                    class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" class="insta" title="Join us on Instagram" target="_blank" rel="noopener noreferrer"><i
+                    class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/company/institute-of-credit-management-of-south-africa/about/" class="in"
+                title="Join us on Linked In" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"
+                    aria-hidden="true"></i></a>
+        </div>
+    </div>
+
+    <div class="padding"></div>
+
+
+
+    <div class="fill-form">
+
+        <!-- form goes here -->
+        <form (ngSubmit)="sendMail()">
+
+            <!-- name -->
+            <div class="form-field">
+                <input type="text" name="name" class="input" placeholder="Name" [(ngModel)]="name" required
+                    minlength="3" #nameInput="ngModel">
+
+                <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
+                    Name is required and needs to be at least 3 characters long.
+                </div>
+            </div>
+
+            <!-- email -->
+            <div class="form-field">
+                <input type="email" name="email" class="input" placeholder="Email" [(ngModel)]="email" required email
+                    #emailInput="ngModel">
+
+                <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+                    Needs to be a valid email.
+                </div>
+            </div>
+
+            <!-- cell -->
+            <div class="form-field">
+                <input type="cell" name="cell" class="input" placeholder="Cellphone Number" [(ngModel)]="cell" required
+                    minlength="7" #cellInput="ngModel">
+
+                <div class="help is-error" *ngIf="cellInput.invalid && cellInput.dirty">
+                    Cell is required and needs to be valid.
+                </div>
+            </div>
+
+            <!-- company -->
+            <div class="form-field">
+                <input type="company" name="company" class="input" placeholder="Company" [(ngModel)]="company" required
+                    #companyInput="ngModel">
+
+                <div class="help is-error" *ngIf="companyInput.invalid && companyInput.dirty">
+                    Company is required.
+                </div>
+            </div>
+
+            <!-- message -->
+            <div class="form-field">
+                <textarea class="textarea" name="message" placeholder="How can we help?" [(ngModel)]="message" required
+                    #messageInput="ngModel"></textarea>
+
+                <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+                    Your message is required!
+                </div>
+            </div>
+
+            <button type="submit" class="button">Submit</button>
+
+        </form>
+
+    </div>
 
 
 </div>
-
-
-
-
-
-
-
-
-
